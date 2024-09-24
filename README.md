@@ -66,3 +66,14 @@ Please follow the below steps to install and run the NewReader App
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Design Pattern
+
+The Model-View-ViewModel (MVVM) pattern helps cleanly separate an application's business and presentation logic from its user interface (UI). Maintaining a clean separation between application logic and the UI helps address numerous development issues and makes an application easier to test, maintain, and evolve
+
+  <a href="">
+    <img src= "NewsReader/Design Pattern/Design Pattern MVVM.png" alt="MVVM" width="800" height="484">
+  </a>
+
+
