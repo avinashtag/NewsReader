@@ -16,17 +16,25 @@ struct NewsFeedCell: View {
         VStack(alignment: .leading, spacing: 10, content: {
             
             HStack(alignment: .top, content: {
-                AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } placeholder: {
-                    ProgressView()
+                if URL(string: article.urlToImage ?? "") == nil{
+                    Image(systemName: "newspaper")
+                        .imageScale(.medium)
+                        .frame( width: 80, height: 80 )
+                        .accessibilityIdentifier(NewsFeedCellAccesibility.newsFeedImage.rawValue)
                 }
-                .frame( width: 80, height: 80 )
-                .clipped()
-                .accessibilityIdentifier(NewsFeedCellAccesibility.newsFeedImage.rawValue)
-
+                else{
+                    
+                    AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame( width: 80, height: 80 )
+                    .clipped()
+                    .accessibilityIdentifier(NewsFeedCellAccesibility.newsFeedImage.rawValue)
+                }
                 VStack(alignment: .leading, content: {
                     Text(article.author ?? "Headlines")
                         .font(.caption)
@@ -52,7 +60,7 @@ struct NewsFeedCell: View {
             }
             
             HStack(alignment: .top, content: {
-                Text("\(Date().conversion(date: true, time: true, doesRelativeDateFormatting: true) ?? "")")
+                Text("\(article.publishedAt?.conversion(date: true, time: true, doesRelativeDateFormatting: true) ?? "")")
                     .font(.caption)
                     .accessibilityIdentifier(NewsFeedCellAccesibility.newsFeedDate.rawValue)
                 Spacer()

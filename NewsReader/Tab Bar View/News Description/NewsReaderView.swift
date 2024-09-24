@@ -20,15 +20,23 @@ struct NewsReaderView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading,  spacing: 10, content: {
-                AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } placeholder: {
-                    ProgressView()
+                if URL(string: article.urlToImage ?? "") == nil{
+                    Image(systemName: "newspaper")
+                        .imageScale(.large)
+                        .frame(width: UIScreen.main.bounds.width - 30 , height: (UIScreen.main.bounds.width - 30) * (9/16))
+                        .accessibilityIdentifier(NewsReaderViewAccesibility.newsFeedImage.rawValue)
                 }
-                .frame(width: UIScreen.main.bounds.width - 30 , height: (UIScreen.main.bounds.width - 30) * (9/16))
-                .accessibilityIdentifier(NewsReaderViewAccesibility.newsFeedImage.rawValue)
+                else{
+                    AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: UIScreen.main.bounds.width - 30 , height: (UIScreen.main.bounds.width - 30) * (9/16))
+                    .accessibilityIdentifier(NewsReaderViewAccesibility.newsFeedImage.rawValue)
+                }
 
                 Divider()
                 HStack(alignment: .top, content: {

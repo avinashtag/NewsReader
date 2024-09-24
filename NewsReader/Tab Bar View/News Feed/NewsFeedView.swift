@@ -39,6 +39,7 @@ struct NewsFeedView: View {
             SegmentedControlView(selectedIndex: Binding(get: {selectedTab}, set: { value in
                 selectedTab = value
                 newsFeedRequest.category = sidetabs[selectedTab].rawValue
+                Task { await fetchNewsFeed()}
             }), titles:  sidetabs.compactMap({$0.rawValue.capitalized}))
             .padding(.horizontal, 15)
             .frame(width: UIScreen.main.bounds.width)

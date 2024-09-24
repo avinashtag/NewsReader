@@ -12,6 +12,15 @@ extension String {
     func localized() -> String {
         return NSLocalizedString(self, comment: "")
     }
+  
+    func conversion(format:String) -> Date? {
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.locale =  Locale.current
+        return formatter.date(from: self)
+    }
+
 }
 
 extension Bundle{

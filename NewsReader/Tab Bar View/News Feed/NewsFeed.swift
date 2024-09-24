@@ -24,14 +24,15 @@ struct NewsFeedRequest:Codable{
     public func load() async throws -> NewsFeedResponse{
       
 //        throw APIError.offline
-        #if DEBUG
-        return try Bundle.main.decoder("Sample.json", of: NewsFeedResponse.self)
-        #endif
+//        #if DEBUG
+//        return try Bundle.main.decoder("Sample.json", of: NewsFeedResponse.self)
+//        #endif
         var endpoint = NewsFeedEndpoint.newsTopHeadlines
         endpoint.query[NewsFeedRequest.CodingKeys.pagesize.rawValue] = "\(pagesize)"
         endpoint.query[NewsFeedRequest.CodingKeys.page.rawValue] = "\(page)"
         if let category = category{ endpoint.query[NewsFeedRequest.CodingKeys.category.rawValue] = category }
-        let response: NewsFeedResponse = try await Network.shared.fetch(for: endpoint)
+        var response: NewsFeedResponse = try await Network.shared.fetch(for: endpoint)
+        response.articles.removeAll(where: {$0.title == "[Removed]"})
         return response
     }
 
@@ -39,7 +40,7 @@ struct NewsFeedRequest:Codable{
 
 struct NewsFeedResponse: Codable {
     let status: String
-    let articles: [Article]
+    var articles: [Article]
     let totalResults : Int64
 }
 
