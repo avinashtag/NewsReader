@@ -11,9 +11,7 @@ import SwiftData
 @main
 struct NewsReaderApp: App {
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
+        let schema = Schema([ BookmarkArticle.self, ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
@@ -25,7 +23,7 @@ struct NewsReaderApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
         }
         .modelContainer(sharedModelContainer)
     }

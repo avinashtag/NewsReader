@@ -1,0 +1,35 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "Bookmark" : {
+
+    },
+    "Bookmark Articals" : {
+
+    },
+    "News Articles" : {
+
+    },
+    "News Feed" : {
+
+    },
+    "Read More" : {
+
+    },
+    "Top Stories" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top Stories"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
