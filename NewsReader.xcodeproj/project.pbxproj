@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E103B7BE2CA3F810007BCB25 /* News Reader App UML.png in Resources */ = {isa = PBXBuildFile; fileRef = E103B7BD2CA3F810007BCB25 /* News Reader App UML.png */; };
+		E103B7BF2CA3F810007BCB25 /* News Reader App UML.png in Resources */ = {isa = PBXBuildFile; fileRef = E103B7BD2CA3F810007BCB25 /* News Reader App UML.png */; };
+		E103B7C02CA3F810007BCB25 /* News Reader App UML.png in Resources */ = {isa = PBXBuildFile; fileRef = E103B7BD2CA3F810007BCB25 /* News Reader App UML.png */; };
 		E17A548C2CA0FA6B00C62762 /* NewsReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A548B2CA0FA6B00C62762 /* NewsReaderApp.swift */; };
 		E17A54922CA0FA6D00C62762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17A54912CA0FA6D00C62762 /* Assets.xcassets */; };
 		E17A54952CA0FA6D00C62762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17A54942CA0FA6D00C62762 /* Preview Assets.xcassets */; };
@@ -111,6 +114,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E103B7BD2CA3F810007BCB25 /* News Reader App UML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News Reader App UML.png"; sourceTree = "<group>"; };
 		E17A54882CA0FA6B00C62762 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17A548B2CA0FA6B00C62762 /* NewsReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReaderApp.swift; sourceTree = "<group>"; };
 		E17A54912CA0FA6D00C62762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				E19FC86D2CA2CD75002DD3E3 /* Design Pattern MVVM.png */,
+				E103B7BD2CA3F810007BCB25 /* News Reader App UML.png */,
 			);
 			path = "Design Pattern";
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				E182DBA52CA2B35F0044A051 /* Bookmark.png in Resources */,
 				E182DBA72CA2B35F0044A051 /* NewsDetail.png in Resources */,
 				E17A54952CA0FA6D00C62762 /* Preview Assets.xcassets in Resources */,
+				E103B7BE2CA3F810007BCB25 /* News Reader App UML.png in Resources */,
 				E17A54922CA0FA6D00C62762 /* Assets.xcassets in Resources */,
 				E1BAD10F2CA0FEED007A6595 /* Localizable.xcstrings in Resources */,
 				E182DBA92CA2B35F0044A051 /* Safari.png in Resources */,
@@ -494,6 +500,7 @@
 			files = (
 				E1BAD1502CA150DB007A6595 /* Sample.json in Resources */,
 				E1BAD1102CA0FEED007A6595 /* Localizable.xcstrings in Resources */,
+				E103B7BF2CA3F810007BCB25 /* News Reader App UML.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +510,7 @@
 			files = (
 				E1BAD1512CA150DB007A6595 /* Sample.json in Resources */,
 				E1BAD1112CA0FEED007A6595 /* Localizable.xcstrings in Resources */,
+				E103B7C02CA3F810007BCB25 /* News Reader App UML.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
