@@ -76,4 +76,11 @@ The Model-View-ViewModel (MVVM) pattern helps cleanly separate an application's 
     <img src= "NewsReader/Design Pattern/Design Pattern MVVM.png" alt="MVVM" width="800" height="484">
   </a>
 
+### UML 
+
+
+  <a href="">
+    <img src= "NewsReader/Design Pattern/News Reader App UML.png" alt="MVVM" width="900" height="1584.77">
+  </a>
+
 
